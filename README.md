@@ -1,5 +1,5 @@
 ## Python implemention of SWE reconstruction algorithm developed by Ross Brown
-- Current version (1.0) reconstructs daily snow depth and density from ERA-5 or ERA-Interim Reanalysis air temperature and total precipitation forcing. 
+- Current version (v1.0) reconstructs daily snow depth and density from ERA-5 or ERA-Interim Reanalysis air temperature and total precipitation forcing. 
 - Input filename format:
    - ERA5_tp_MM_YYYY.nc, ERA5_t2m_MM_YYYY.nc
    - ERAI_tp_MM_YYYY.nc, ERAI_t2m_MM_YYYY.nc
@@ -7,6 +7,18 @@
 ## Ref: 
 - Brasnett, B., 1999: A global analysis of snow depth for numerical weather prediction. J. Appl. Meteorol., 38, 726-740.
 - Brown, R.D., B. Brasnett and D. Robinson, 2001: Gridded North American monthly snow depth and snow water equivalent for GCM validation (for submission to Atmosphere-Ocean).
+
+## Getting started
+
+A conda environment file is provided for consistency, called 'environment.yml'. Create the environment as follows:
+
+```
+conda env create -f environment.yml
+```
+
+## Reconstruction code
+
+The source code can be found entitled 'SWE_reconstruction.py'. Some configurable settings can be found in the first lines of the same file. 
 
 ### Steps:
 1. Change settings to appropriate year and desired forcing
@@ -43,4 +55,4 @@
 2. At the end of the year, save netcdf with accumulated precip (mm water), snow (mm water), and max SWE (mm water)
 
 ## Visual representation of algorithm
-![](readme_files/SWE_Analysis_2020.png)
+![](auxfiles/readme_files/SWE_Analysis_2020.png)
